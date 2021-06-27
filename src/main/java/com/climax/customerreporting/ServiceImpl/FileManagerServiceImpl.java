@@ -1,5 +1,6 @@
 package com.climax.customerreporting.ServiceImpl;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -93,8 +94,45 @@ public class FileManagerServiceImpl implements FileImportManager {
 	}
 
 	@Override
-	public String readAndStoreTxtFile(File file) {
-		// TODO Auto-generated method stub
+	public String readAndStoreTxtFile(File file) throws IOException {
+		
+		BufferedReader reader =new BufferedReader(new FileReader(file));
+		
+		String ligne="";
+		while ((ligne=reader.readLine())!=null) {
+			
+			String[] content=ligne.split(" ");
+			
+			
+			Profession profession=new Profession();
+			Employers employer=new Employers();
+			
+			profession.setLibelleProfession(content[3]);
+			profession.setSalaireProfession(Long.valueOf(content[4]));
+			employer.setNom(content[0]);
+			employer.setPrenom(content[1]);
+			employer.setAge(Integer.valueOf(content[2]));
+			
+			 profession.setCodeProfession(Long.valueOf(1));
+			
+			
+			  if (professionService.save(profession)!=null) {
+			  profession.setCodeProfession(professionService.save(profession).
+			  getCodeProfession()); employer.setProfession(profession);
+			  
+			  employerService.save(employer);
+			  
+			  }else {
+				  profession.setCodeProfession(professionService.save(profession).
+			  getCodeProfession()); employer.setProfession(profession);
+			  
+			  employerService.save(employer);
+			  
+			  }
+			
+			
+		}
+	
 		return null;
 	}
 

@@ -12,7 +12,7 @@ public interface FileImportManager {
 	public String getFileExentision(File file);
 	
 	public String readAndStoreCsvFile(File file) throws FileNotFoundException, IOException, CsvValidationException;
-	public String readAndStoreTxtFile(File file);
+	public String readAndStoreTxtFile(File file) throws FileNotFoundException, IOException;
 	public String readAndStoreXmlFile(File file);
 	public String readAndStoreJson(File file) throws ParseException, org.json.simple.parser.ParseException;
 	
