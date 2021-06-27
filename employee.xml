@@ -1,0 +1,16 @@
+<employees>
+    <employee id="111">
+        <nom>Ouedraogo</nom>
+        <prenom>Salif</prenom>
+        <age>25</age>
+        <profession>Deboucher</profession>
+        <salaire>20</salaire>
+    </employee>
+    <employee id="222">
+        <nom>TAPSOBA</nom>
+        <prenom>Fousseni</prenom>
+        <age>30</age>
+        <profession>Eleveur</profession>
+        <salaire>10</salaire>
+    </employee>
+</employees>

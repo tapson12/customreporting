@@ -12,6 +12,12 @@ import javax.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * 
+ * Domaine profession
+ *
+ */
+
 @Entity(name = "profession")
 public class Profession implements Serializable {
 	

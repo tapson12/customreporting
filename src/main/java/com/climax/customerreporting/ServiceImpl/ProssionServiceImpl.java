@@ -13,6 +13,11 @@ import com.climax.customerreporting.domaines.Profession;
 import com.climax.customerreporting.repository.ProfessionRepository;
 import com.climax.customerreporting.services.ProfessionService;
 
+/**
+ * 
+ * Implementation of Profession service 
+ *
+ */
 @Service
 @Transactional
 public class ProssionServiceImpl implements ProfessionService {
