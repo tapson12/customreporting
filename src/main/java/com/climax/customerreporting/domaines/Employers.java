@@ -9,11 +9,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import lombok.Getter;
-import lombok.Setter;
+/**
+ * 
+ * Domaine employé
+ *
+ */
 
 @Entity(name = "employers")
 public class Employers implements Serializable {
+	
+	
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

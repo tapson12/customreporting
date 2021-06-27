@@ -21,9 +21,9 @@ public class ImportFileController {
 	private String findName(Model model) {
 		
 		model.addAttribute("filename", "salutt");
-		System.out.println(filenmae.getFileExentision(new File("C:\\paimentcsv.csv")));
+		
 		try {
-			filenmae.readAndStoreTxtFile(new File("C:\\employee.txt").getAbsoluteFile());
+			filenmae.readAndStoreXmlFile(new File("C:\\employee.xml").getAbsoluteFile());
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

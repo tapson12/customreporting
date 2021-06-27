@@ -14,6 +14,11 @@ import com.climax.customerreporting.repository.EmployerRepository;
 import com.climax.customerreporting.services.EmployerService;
 import com.climax.customerreporting.services.ProfessionService;
 
+/**
+ * 
+ * Implementation of Employers Service 
+ *
+ */
 @Service
 @Transactional
 public class EmployerServiceImpl  implements EmployerService{
