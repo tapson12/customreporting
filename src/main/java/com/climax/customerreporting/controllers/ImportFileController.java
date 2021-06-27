@@ -16,6 +16,20 @@ public class ImportFileController {
 	
 	@Autowired
 	FileManagerServiceImpl filenmae;
+
+	@GetMapping("/")
+	private String importer(Model model) {
+	
+		return "index";
+		
+	}
+
+	@GetMapping("/stat")
+	private String statistiques(Model model) {
+	
+		return "statistique";
+		
+	}
 	
 	@GetMapping("/import")
 	private String findName(Model model) {

@@ -1,10 +1,69 @@
 <!DOCTYPE html>
 <html lang="fr" xmlns:th="http://www.thymeleaf.org">
-<html>
 <head>
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climax - App</title>
+  <link rel="stylesheet" th:href = "@{/css/bootstrap.min.css}" >
+    
 </head>
+
 <body>
- <span th:text="${filename}"></span>   
+
+<div th:replace="~{menu/mainmenu::main}"></div>
+<br><br><br>
+    <section class="content">
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card card-primary">
+
+              <div class="card-header">
+                <h3 class="card-title">Importer un fichier</h3>
+              </div>
+
+              <div class="card-body">
+                <div class="row">
+                  
+                  <div class=".col-sm-5 .col-md-6">
+                    <input class="form-control form-control-lg" id="fileLg" type="file">
+                  </div> 
+                  <div class="col-md-4 ml-auto">
+                    <button class="btn btn-outline-info">Charger le fichier</button>
+                  </div>
+
+                </div>
+                <br><br>
+                <table id="donnees" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Nom</th>
+                      <th>Prénom(s)</th>
+                      <th>Age</th>
+                      <th>Profession</th>
+                      <th>Salaire</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
 </body>
 </html>
