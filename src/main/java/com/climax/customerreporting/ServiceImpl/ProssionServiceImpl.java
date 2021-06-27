@@ -21,15 +21,15 @@ public class ProssionServiceImpl implements ProfessionService {
 	private ProfessionRepository dao;
 
 	@Override
-	public Long save(Profession profession)  {
+	public Profession save(Profession profession)  {
 	
 		if (professionalExist(profession.getLibelleProfession())) {
 			
-			return dao.findById(profession.getCodeProfession()).orElse(null).getCodeProfession();
+			return dao.findByLibelleProfession(profession.getLibelleProfession()).get(0);
 			
 		} else {
 			
-			return dao.save(profession).getCodeProfession();
+			return dao.save(profession);
 
 		}
 	

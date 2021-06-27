@@ -9,7 +9,7 @@ import com.climax.customerreporting.domaines.Profession;
 
 public interface ProfessionService {
 	
-	Long save(Profession profession);
+	Profession save(Profession profession);
 	Profession update(Profession profession);
 	Profession getProfessionById(Long id);
 	List<Profession>getAll();

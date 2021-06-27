@@ -16,7 +16,7 @@ import lombok.Setter;
 public class Employers implements Serializable {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long codeEmployer;
 	private String nom;
 	private String prenom;

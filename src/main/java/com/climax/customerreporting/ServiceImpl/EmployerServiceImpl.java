@@ -26,9 +26,8 @@ public class EmployerServiceImpl  implements EmployerService{
 	@Override
 	public Employers save(Employers employers) {
 		
-		Long codeprofession= serviceProfessional.save(serviceProfessional.getProfessionById(employers.getProfession().getCodeProfession()));
 		
-		employers.setProfession(serviceProfessional.getProfessionById(codeprofession));
+		employers.setProfession(serviceProfessional.save(employers.getProfession()));
 		
 		return  dao.save(employers);
 	}
